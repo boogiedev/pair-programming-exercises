@@ -38,13 +38,34 @@ OUTPUT: "I love to code and colab on github with my folks"
 '''
 def clean_string(noisy_str:str) -> str:
     res = ''
-    # loop through noisy_str 
+    # loop through noisy_str
     for char in noisy_str:
         # checking whether char is an alphabet
-        if char.isalpha() or char == " ": 
+        if char.isalpha() or char == " ":
             res += char
 
     return res
 
 assert clean_string("""I& #lo!ve% to %c!o%d&e %a@n^d ^c!ol#ab% ^o!n g$i&t@hub# w%ith $m$y& fo@lks!""") == "I love to code and colab on github with my folks"
 
+
+
+
+'''
+Problem 3:
+
+Access Codes: Given a list of access codes, and a dictionary with keys as each access code, sum up all the values at each key (given they exist)
+
+INPUT: ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQR', 'TUV', 'YZ', 'YZ', 'ABC'], {'ABC': 90, 'GHI': 73, 'JKL': 73, 'MNO': 98, 'PQR': 100, 'YZ': 19}
+
+OUTPUT: 562
+
+'''
+
+def access_codes(codes:list, access_dict:dict) -> int:
+    res = None
+
+
+    return res
+
+assert access_codes() == 562
