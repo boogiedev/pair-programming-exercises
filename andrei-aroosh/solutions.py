@@ -36,11 +36,15 @@ INPUT: "I& #lo!ve% to %c!o%d&e %a@n^d ^c!ol#ab% ^o!n g$i&t@hub# w%ith $m$y& fo@l
 OUTPUT: "I love to code and colab on github with my folks"
 
 '''
-
 def clean_string(noisy_str:str) -> str:
     res = ''
-
+    # loop through noisy_str 
+    for char in noisy_str:
+        # checking whether char is an alphabet
+        if char.isalpha() or char == " ": 
+            res += char
 
     return res
 
 assert clean_string("""I& #lo!ve% to %c!o%d&e %a@n^d ^c!ol#ab% ^o!n g$i&t@hub# w%ith $m$y& fo@lks!""") == "I love to code and colab on github with my folks"
+
