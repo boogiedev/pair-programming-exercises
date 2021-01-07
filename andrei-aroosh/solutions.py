@@ -15,10 +15,17 @@ OUTPUT: [1, 2]
 '''
 
 def twosum(arr:list, trg:int) -> list:
-    res = []
+    for i in range(len(arr)):
+        needed_num = trg - arr[i]
+        for x in range(i, len(arr)):
+            if arr[x] == needed_num:
+                return [i,x]
 
 
-    return res
+
+
+
+
 
 
 assert twosum([10, 33, 55, 2, 68, 100], 88) == [1, 2]
