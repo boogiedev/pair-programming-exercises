@@ -54,7 +54,7 @@ assert clean_string("""I& #lo!ve% to %c!o%d&e %a@n^d ^c!ol#ab% ^o!n g$i&t@hub# w
 '''
 Problem 3:
 
-Access Codes: Given a list of access codes, and a dictionary with keys as each access code, sum up all the values at each key (given they exist)
+Access Codes: Given a list of access codes, and a dictionary with keys as each access code, sum up all the values at each key (given they exist) within the access code list
 
 INPUT: ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQR', 'TUV', 'YZ', 'YZ', 'ABC'], {'ABC': 90, 'GHI': 73, 'JKL': 73, 'MNO': 98, 'PQR': 100, 'YZ': 19}
 
@@ -68,4 +68,4 @@ def access_codes(codes:list, access_dict:dict) -> int:
 
     return res
 
-assert access_codes() == 562
+assert access_codes(['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQR', 'TUV', 'YZ', 'YZ', 'ABC'], {'ABC': 90, 'GHI': 73, 'JKL': 73, 'MNO': 98, 'PQR': 100, 'YZ': 19}) == 562
