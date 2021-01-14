@@ -104,8 +104,17 @@ Output: 3
 '''
 
 def jewels_and_stones(jewels:str, stones:str) -> int:
-    res = None
+    res = 0
 
+    # for i in jewels:
+    #     for a in stones:
+    #         if i == a:
+    #             res += 1
+    j_dict = {j:1 for j in jewels}
+    print(j_dict)
+    for stone in stones:
+        present = j_dict.get(stone, 0)
+        res += present
     return res
 
 
