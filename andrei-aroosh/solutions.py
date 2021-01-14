@@ -76,8 +76,40 @@ assert access_codes(['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQR', 'TUV', 'YZ', 'YZ'
 
 
 
+'''
+Problem 4:
+
+Jewels and Stones: You're given strings jewels representing the types of stones that are jewels, and stones representing the stones you have. Each character in stones is a type of stone you have. You want to know how many of the stones you have are also jewels.
+
+Letters are case sensitive, so "a" is considered a different type of stone from "A".
 
 
+
+Example 1:
+
+Input: jewels = "aA", stones = "aAAbbbb"
+Output: 3
+
+Example 2:
+
+Input: jewels = "z", stones = "ZZ"
+Output: 0
+
+Example 3:
+
+Input: jewels = "ats", stones = "AAABTsAts"
+Output: 3
+
+
+'''
+
+def jewels_and_stones(jewels:str, stones:str) -> int:
+    res = None
+
+    return res
+
+
+assert jewels_and_stones(jewels="ats", stones="AAABTsAts") == 3
 
 
 #
