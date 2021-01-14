@@ -63,9 +63,13 @@ OUTPUT: 562
 '''
 
 def access_codes(codes:list, access_dict:dict) -> int:
-    res = None
-
-
+    res = 0
+    for code in codes:
+        val = access_dict.get(code, 0)
+        res += val
+        # for key, val in access_dict.items():
+        #     if i == key:
+        #         res += val
     return res
 
 assert access_codes(['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQR', 'TUV', 'YZ', 'YZ', 'ABC'], {'ABC': 90, 'GHI': 73, 'JKL': 73, 'MNO': 98, 'PQR': 100, 'YZ': 19}) == 562
