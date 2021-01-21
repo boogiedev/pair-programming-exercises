@@ -111,7 +111,7 @@ def jewels_and_stones(jewels:str, stones:str) -> int:
     #         if i == a:
     #             res += 1
     j_dict = {j:1 for j in jewels}
-    print(j_dict)
+    # print(j_dict)
     for stone in stones:
         present = j_dict.get(stone, 0)
         res += present
@@ -129,7 +129,7 @@ You are given an m x n integer grid accounts where accounts[i][j] is the amount 
 
 A customer's wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.
 
- 
+
 
 Example 1:
 
@@ -143,9 +143,9 @@ Example 2:
 
 Input: accounts = [[1,5],[7,3],[3,5]]
 Output: 10
-Explanation: 
+Explanation:
 1st customer has wealth = 6
-2nd customer has wealth = 10 
+2nd customer has wealth = 10
 3rd customer has wealth = 8
 The 2nd customer is the richest with a wealth of 10.
 Example 3:
@@ -157,9 +157,12 @@ Output: 17
 """
 
 def greatest_wealth(accounts:list) -> int:
-    pass
+    res = []
+    for customer in accounts:
+        res.append(sum(customer))
+
+    return max(res)
 
 
 
 assert greatest_wealth([[2,8,7],[7,1,3],[1,9,5]]) == 17
-
