@@ -157,12 +157,69 @@ Output: 17
 """
 
 def greatest_wealth(accounts:list) -> int:
-    res = []
+#     res = []
+#     for customer in accounts:
+#         res.append(sum(customer))
+
+#     return max(res)
+    
+    res = -1
     for customer in accounts:
-        res.append(sum(customer))
+        account_sum = sum(customer)
+#         res = account_sum if account_sum > res else res
+        if account_sum > res:
+            res = account_sum
 
-    return max(res)
-
+    return res
+    
 
 
 assert greatest_wealth([[2,8,7],[7,1,3],[1,9,5]]) == 17
+
+
+"""
+Problem 6:
+
+Valid Parentheses 
+
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+ 
+
+Example 1:
+
+Input: s = "()"
+Output: true
+Example 2:
+
+Input: s = "()[]{}"
+Output: true
+Example 3:
+
+Input: s = "(]"
+Output: false
+Example 4:
+
+Input: s = "([)]"
+Output: false
+Example 5:
+
+Input: s = "{[]}"
+Output: true
+
+"""
+
+
+def valid_parentheses(paren_string:str) -> bool:
+    res = None
+    
+    
+    return res
+
+
+assert valid_parentheses('()[]{}') == True
+
