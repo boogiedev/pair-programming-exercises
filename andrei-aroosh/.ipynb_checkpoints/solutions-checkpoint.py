@@ -221,7 +221,8 @@ def valid_parentheses(paren_string:str) -> bool:
         if char in dct:
             stack.append(char)
         else:
-            if not stack or char != dct[stack.pop()]: return False           
+            if not stack or char != dct[stack.pop()]: 
+                return False           
     return not stack
     
 
