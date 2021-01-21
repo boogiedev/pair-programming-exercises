@@ -215,10 +215,15 @@ Output: true
 
 
 def valid_parentheses(paren_string:str) -> bool:
-    res = None
+    dct = {"[": "]", "(": ")", "{" : "}"}
+    stack = []
+    for char in paren_string:
+        if char in dct:
+            stack.append(char)
+        else:
+            if not stack or char != dct[stack.pop()]: return False           
+    return not stack
     
-    
-    return res
 
 
 assert valid_parentheses('()[]{}') == True
