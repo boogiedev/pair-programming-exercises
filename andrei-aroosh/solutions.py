@@ -313,10 +313,21 @@ Output:
 class ParkingSystem:
 
     def __init__(self, big: int, medium: int, small: int):
-        pass
+        self.big = big
+        self.medium = medium
+        self.small = small
 
-    def addCar(self, carType: int) -> bool:
-        pass
+    def addCar(self, carType: int):
+
+
+        if carType == 1 and self.big > 0:
+            self.big -= 1
+        if carType == 2 and self.medium > 0:
+            self.medium -= 1
+        if carType == 3 and self.small > 0:
+            self.small -= 1
+
+
 
 
 bellevue_square = ParkingSystem(2, 1, 1)
@@ -327,4 +338,6 @@ bellevue_square.addCar(2)
 # This is NOT possible
 bellevue_square.addCar(2)
 
-#
+print(bellevue_square.small)
+print(bellevue_square.medium)
+print(bellevue_square.big)
