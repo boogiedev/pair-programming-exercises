@@ -270,16 +270,22 @@ Output: [true,false,true]
 
 def kidsWithCandies(candies:list, extraCandies:int) -> list:
     res = []
-
-
+    max_candies = max(candies)
     for i in candies:
         currentCandies = extraCandies + i
-        if currentCandies >= max(candies):
-            res.append(True)
-        else:
-            res.append(False)
-
+        # if currentCandies >= max_candies:
+        #     res.append(True)
+        # else:
+        #     res.append(False)
+        res.append(currentCandies >= max_candies)
 
     return res
 
 assert kidsWithCandies(candies=[4,2,1,1,2], extraCandies=1) == [True,False,False,False,False]
+
+
+
+
+
+
+#
