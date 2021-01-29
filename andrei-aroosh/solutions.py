@@ -269,7 +269,15 @@ Output: [true,false,true]
 """
 
 def kidsWithCandies(candies:list, extraCandies:int) -> list:
-    res = None
+    res = []
+
+
+    for i in candies:
+        currentCandies = extraCandies + i
+        if currentCandies >= max(candies):
+            res.append(True)
+        else:
+            res.append(False)
 
 
     return res
