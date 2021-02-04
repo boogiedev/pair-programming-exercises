@@ -32,3 +32,37 @@ map.show()
 
 ^ result of map.show()
 '''
+
+# 1 Class is made, BUT not called
+class Map:
+
+    # 1 init is made, BUT NOT CALLED
+    def __init__(self, width, height, player_marker, player_cord):
+        # 2 Object init, OBJECT IS CREATED
+        self.width = width
+        self.height = height
+        self.player_marker = player_marker
+        self.player_cord = player_cord
+        self.map = []
+
+        self.generate()
+        
+    # 1 Generate is made, BUT NOT CALLED
+    def generate(self):
+        for i in range(1,self.height):
+            self.map.append([])
+
+        for i in self.map:
+            for x in range(1,self.width):
+                i.append([])
+
+#2 Object is created
+mymap = Map(width=3, height=3, player_marker='x', player_cord=(0, 0))
+print(mymap.map)
+
+
+
+
+
+
+        
