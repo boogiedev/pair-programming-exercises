@@ -49,20 +49,35 @@ class Map:
         
     # 1 Generate is made, BUT NOT CALLED
     def generate(self):
-        for i in range(1,self.height):
-            self.map.append([])
+        for a in self.map:
+            for y in range(self.height):
+                self.map.append([])
 
         for i in self.map:
-            for x in range(1,self.width):
+            for x in range(self.width):
                 i.append([])
 
 #2 Object is created
-mymap = Map(width=3, height=3, player_marker='x', player_cord=(0, 0))
-print(mymap.map)
+# mymap = Map(width=3, height=3, player_marker='x', player_cord=(0, 0))
+# print(mymap.map)
 
 
 
 
 
 
-        
+
+# test_map = []
+# width = 3
+# height = 3
+
+# for i in range(height):
+#     row = ['-' for _ in range(width)]
+#     test_map.append(row)
+
+# for x in test_map: print(x)
+# print()
+
+# test_map[0][0] = 'x'
+
+# for x in test_map: print(x)
