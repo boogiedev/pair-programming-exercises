@@ -9,10 +9,11 @@ You guys are tasked with making a map object, required functionality will be as 
 - METHODS (these are some suggested methods)
     - .update() this function will 'update' the map with current player coordinates shown via player_marker
     - .show() this function will print the map out in a user readable way
+    - .move_marker(cord=(1, 0)) this function will move the player marker to the designated coordinate
 
 Example script:
 
-map = Map(width=3, height=3, player_marker='X', player_cord=(0, 0))
+map = Map(width=3, height=3, player_marker='x', player_cord=(0, 0))
 map.show()
 
 x - -
@@ -21,4 +22,13 @@ x - -
 
 ^ result of map.show()
 
+map.move_marker(cord=(1,0))
+map.update()
+map.show()
+
+- x -
+- - -
+- - -
+
+^ result of map.show()
 '''
