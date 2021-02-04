@@ -318,8 +318,6 @@ class ParkingSystem:
         self.small = small
 
     def addCar(self, carType: int):
-
-
         if carType == 1 and self.big > 0:
             self.big -= 1
         if carType == 2 and self.medium > 0:
@@ -327,17 +325,15 @@ class ParkingSystem:
         if carType == 3 and self.small > 0:
             self.small -= 1
 
-
-
-
-bellevue_square = ParkingSystem(2, 1, 1)
-# This is possible
-bellevue_square.addCar(1)
-# This is possible
-bellevue_square.addCar(2)
-# This is NOT possible
-bellevue_square.addCar(2)
-
-print(bellevue_square.small)
-print(bellevue_square.medium)
-print(bellevue_square.big)
+ 
+# bellevue_square = ParkingSystem(2, 1, 1)
+# # This is possible
+# bellevue_square.addCar(1)
+# # This is possible
+# bellevue_square.addCar(2)
+# # This is NOT possible
+# bellevue_square.addCar(2)
+#
+# print(bellevue_square.small)
+# print(bellevue_square.medium)
+# print(bellevue_square.big)
