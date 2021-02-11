@@ -43,41 +43,26 @@ class Map:
         self.height = height
         self.player_marker = player_marker
         self.player_cord = player_cord
-        self.map = []
+        self.grid = []
 
         self.generate()
-        
+
     # 1 Generate is made, BUT NOT CALLED
     def generate(self):
-        for a in self.map:
-            for y in range(self.height):
-                self.map.append([])
+        for _ in range(self.height):
+            row = ['-' for _ in range(self.width)]
+            self.grid.append(row)
 
-        for i in self.map:
-            for x in range(self.width):
-                i.append([])
+        player_x, player_y = self.player_cord[0], self.player_cord[1]
+        self.grid[player_y][player_x] = "X"
+
+        # pretty_map = """"""
+        # for row in grid:
+        #     str_row = " ".join(row)
+        #     pretty_map += str_row + "\n"
+
+        # print(pretty_map)
 
 #2 Object is created
-# mymap = Map(width=3, height=3, player_marker='x', player_cord=(0, 0))
-# print(mymap.map)
-
-
-
-
-
-
-
-# test_map = []
-# width = 3
-# height = 3
-
-# for i in range(height):
-#     row = ['-' for _ in range(width)]
-#     test_map.append(row)
-
-# for x in test_map: print(x)
-# print()
-
-# test_map[0][0] = 'x'
-
-# for x in test_map: print(x)
+mymap = Map(width=3, height=3, player_marker='x', player_cord=(0, 0))
+print(mymap.grid)
