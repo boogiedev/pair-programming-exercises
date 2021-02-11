@@ -44,11 +44,11 @@ class Map:
         self.player_marker = player_marker
         self.player_cord = player_cord
         self.grid = []
-
         self.generate()
 
     # 1 Generate is made, BUT NOT CALLED
     def generate(self):
+        self.grid = []
         for _ in range(self.height):
             row = ['-' for _ in range(self.width)]
             self.grid.append(row)
@@ -56,13 +56,25 @@ class Map:
         player_x, player_y = self.player_cord[0], self.player_cord[1]
         self.grid[player_y][player_x] = "X"
 
-        # pretty_map = """"""
-        # for row in grid:
-        #     str_row = " ".join(row)
-        #     pretty_map += str_row + "\n"
+    def move_marker(self, coordinate):
+        self.player_cord = coordinate
+        self.generate()
 
-        # print(pretty_map)
+    def show(self):
+        pretty_map = """"""
+        for row in self.grid:
+            str_row = " ".join(row)
+            pretty_map += str_row + "\n"
+        print(pretty_map)
+
+
 
 #2 Object is created
 mymap = Map(width=3, height=3, player_marker='x', player_cord=(0, 0))
+mymap.show()
+
+mymap.move_marker(coordinate=(0, 1))
+
+print("\n")
+mymap.show()
 print(mymap.grid)
