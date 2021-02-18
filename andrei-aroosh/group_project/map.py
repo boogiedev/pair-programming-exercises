@@ -66,15 +66,3 @@ class Map:
             str_row = " ".join(row)
             pretty_map += str_row + "\n"
         print(pretty_map)
-
-
-
-#2 Object is created
-mymap = Map(width=3, height=3, player_marker='x', player_cord=(0, 0))
-mymap.show()
-
-mymap.move_marker(coordinate=(0, 1))
-
-print("\n")
-mymap.show()
-print(mymap.grid)
