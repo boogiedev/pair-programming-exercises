@@ -1,3 +1,7 @@
 Congrats on finishing the map, now you must use it in your main.py file.
 
 1: Import the map module, and use it in a game
+2: Make a simple game, character is stuck on a 4x4 island
+3: Allow character to move up down left right
+4: Allow character to explore current space for treasure
+5: Randomly spread out treasure on map
